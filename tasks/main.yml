@@ -1,0 +1,9 @@
+---
+- name: Apt cache update
+  apt:
+    update_cache: yes
+
+- name: Install + update desktop packages
+  apt:
+    name: "{{ desktop_packages }}"
+    state: latest
